@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/quiz.css">
+    <title>quiz</title>
+</head>
+<body>
+    <!-- クイズ部分 -->
+    <div class="container">
+        <p>問題</p>
+        <div id="question"></div>
+
+        <div id="answer_buttons">
+            <button id="true_button">〇</button>
+            <button id="false_button">✕</button>
+        </div>
+
+        <div id="result"></div>
+
+        <!-- <p>成否判定</p>
+        <div id="answer"></div> -->
+        <p>解説</p>
+        <div id="explanation"></div>
+        
+        <div class="info-row">
+            <div class="info-box">
+                <p>ジャンル</p>
+                <div id="genre"></div>
+            </div>
+
+            <div class="info-box">
+                <p>難易度</p>
+                <div id="difficulty"></div>
+            </div>
+        </div>
+
+        <div class="button-row">
+            <button id="fact_check">ファクトチェック</button>
+            <button id="next_quiz">次の問題</button>
+        </div>
+    </div>
+
+    <!-- ファクトチェック部分 -->
+    <div id="factModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal">&times;</span>
+            <h2>ファクトチェック</h2>
+
+            <div id="loader"></div>
+            <p id="factStatus">ファクトチェック中...</p>
+
+            <div id="factResult" style="display:none;">
+                <p>判定：<span id="factJudge"></span></p>
+                <p>理由：<span id="factReason"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/quiz.js"></script>
+</body>
+</html>
